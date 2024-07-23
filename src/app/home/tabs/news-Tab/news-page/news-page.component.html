@@ -1,0 +1,58 @@
+<div class="w-100 pt-4 p-5">
+    <h2 class="title font-csp2 mb-4">Lo último</h2>
+    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+        <app-main-news
+        title="Volleyball: se juega la 13a fecha del apertura" date="27/08" type="volleyball"
+        description="Se jugara en el polideportivo de las piedras contra el equipo de Enfoque."
+        imageUrl="../../../assets/images/news/partidoVolley.jpg" />
+        <app-full-img-main-news title="¡Campeones del apertura!" date="27/04" type="handball"
+            imageUrl="../../../assets/images/news/mayores.jpg" />
+    </div>
+    <div class="w-100 d-flex justify-content-between flex-column flex-sm-row flex-wrap mb-4">
+        <app-secondary-news
+            title="Remodelación del club" date="27/08" type="general" class="top"
+            description="El club ha renovado su fachada con una nueva capa de pintura vibrante."
+            imageUrl="../../../assets/images/club.jpg" />
+        <app-full-img-secondary-news title="Campeonato de truco" date="27/08" type="handball"
+        class="top" imageUrl="../../../assets/images/news/truco.jpg" />
+        <app-secondary-news title="Finalizó la 79° vuelta ciclista del Uruguay"
+        date="27/08" type="ciclismo" class="top2"
+        description="Una gran experiencia para todos los que participaron en cada uno de sus roles."
+        imageUrl="../../../assets/images/news/ciclismo.jpg" />
+        <app-full-img-secondary-news title="¡Uruguay campeón del mundo en bochas!" date="27/08" type="bochas"
+        imageUrl="../../../assets/images/news/bochas.jpg" />
+    </div>
+    <div class="w-100 d-flex justify-content-between flex-column flex-sm-row flex-wrap mb-4">
+        <app-secondary-news
+            title="Remodelación del club" date="27/08" type="general" class="top"
+            description="El club ha renovado su fachada con una nueva capa de pintura vibrante."
+            imageUrl="../../../assets/images/club.jpg" />
+        <app-full-img-secondary-news title="Campeonato de truco" date="27/08" type="handball"
+        class="top" imageUrl="../../../assets/images/news/truco.jpg" />
+        <app-secondary-news title="Finalizó la 79° vuelta ciclista del Uruguay"
+        date="27/08" type="ciclismo" class="top2"
+        description="Una gran experiencia para todos los que participaron en cada uno de sus roles."
+        imageUrl="../../../assets/images/news/ciclismo.jpg" />
+        <app-full-img-secondary-news title="¡Uruguay campeón del mundo en bochas!" date="27/08" type="bochas"
+        imageUrl="../../../assets/images/news/bochas.jpg" />
+    </div>
+    <div class="d-flex flex-column flex-md-row justify-content-between">
+        <app-main-news
+        title="Volleyball: se juega la 13a fecha del apertura" date="27/08" type="volleyball"
+        description="Se jugara en el polideportivo de las piedras contra el equipo de Enfoque."
+        imageUrl="../../../assets/images/news/partidoVolley.jpg" />
+        <app-full-img-main-news title="¡Campeones del apertura!" date="27/04" type="handball"
+            imageUrl="../../../assets/images/news/mayores.jpg" />
+    </div>
+</div>
+
+<style>
+    h2::before {
+        content: '';
+        display: block;
+        width: 70px;
+        height: 5px;
+        background-color: var(--cspBlue);
+        margin-bottom: 5px;
+    }
+</style>

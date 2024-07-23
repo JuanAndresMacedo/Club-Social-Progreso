@@ -7,10 +7,10 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "inlineTemplate": true,
+          "inlineTemplate": false,
           "inlineStyle": true,
           "skipTests": true,
-          "standalone": false
+          "standalone": true
         },
         "@schematics/angular:class": {
           "skipTests": true
@@ -51,10 +51,7 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+                "src/assets"
             ],
             "styles": [
               "src/styles.css"
