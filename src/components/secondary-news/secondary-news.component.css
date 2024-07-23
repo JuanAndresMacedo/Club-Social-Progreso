@@ -1,6 +1,7 @@
 :host {
     width: 23.5%;
     height: 400px;
+    cursor: pointer;
 }
 
 #container:hover img {
@@ -25,6 +26,7 @@ img {
     width: 100%;
     height: 60%;
     background-color: rgb(255, 255, 255);
+    overflow: auto;
 }
 
 #subInfoContainer{
