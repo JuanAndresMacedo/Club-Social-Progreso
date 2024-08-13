@@ -164,7 +164,7 @@ export class NewsService {
     },
     {
       id: 7,
-      title: 'Noticia Extra',
+      title: 'Ciclismo: premios del Bingo',
       content: [
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
@@ -173,11 +173,11 @@ export class NewsService {
         'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
         'An unknown printer took a galley of type and scrambled it to make a type specimen book.'
       ],
-      description: '',
-      imageUrl: '../../../assets/images/news/bochas.jpg',
+      description: 'Se efectivizaron los vuelos en helicóptero, premios del bingo del ciclismo.',
+      imageUrl: '../../../assets/images/news/vuelo.jpg',
       date: '27/04',
-      topic: 'bochas',
-      verticalImage: true
+      topic: 'ciclismo',
+      verticalImage: false
     }
   ];
 
