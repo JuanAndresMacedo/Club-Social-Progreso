@@ -1,48 +1,20 @@
 <div class="w-100 pt-4 p-5">
     <h2 class="title font-csp2 mb-4">Lo último</h2>
-    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-        <app-main-news
-        title="Volleyball: se juega la 13a fecha del apertura" date="27/08" type="volleyball"
-        description="Se jugara en el polideportivo de las piedras contra el equipo de Enfoque."
-        imageUrl="../../../assets/images/news/partidoVolley.jpg" />
-        <app-full-img-main-news title="¡Campeones del apertura!" date="27/04" type="handball"
-            imageUrl="../../../assets/images/news/mayores.jpg" />
-    </div>
-    <div class="w-100 d-flex justify-content-between flex-column flex-sm-row flex-wrap mb-4">
-        <app-secondary-news
-            title="Remodelación del club" date="27/08" type="general" class="top"
-            description="El club ha renovado su fachada con una nueva capa de pintura vibrante."
-            imageUrl="../../../assets/images/club.jpg" />
-        <app-full-img-secondary-news title="Campeonato de truco" date="27/08" type="handball"
-        class="top" imageUrl="../../../assets/images/news/truco.jpg" />
-        <app-secondary-news title="Finalizó la 79° vuelta ciclista del Uruguay"
-        date="27/08" type="ciclismo" class="top2"
-        description="Una gran experiencia para todos los que participaron en cada uno de sus roles."
-        imageUrl="../../../assets/images/news/ciclismo.jpg" />
-        <app-full-img-secondary-news title="¡Uruguay campeón del mundo en bochas!" date="27/08" type="bochas"
-        imageUrl="../../../assets/images/news/bochas.jpg" />
-    </div>
-    <div class="w-100 d-flex justify-content-between flex-column flex-sm-row flex-wrap mb-4">
-        <app-secondary-news
-            title="Remodelación del club" date="27/08" type="general" class="top"
-            description="El club ha renovado su fachada con una nueva capa de pintura vibrante."
-            imageUrl="../../../assets/images/club.jpg" />
-        <app-full-img-secondary-news title="Campeonato de truco" date="27/08" type="handball"
-        class="top" imageUrl="../../../assets/images/news/truco.jpg" />
-        <app-secondary-news title="Finalizó la 79° vuelta ciclista del Uruguay"
-        date="27/08" type="ciclismo" class="top2"
-        description="Una gran experiencia para todos los que participaron en cada uno de sus roles."
-        imageUrl="../../../assets/images/news/ciclismo.jpg" />
-        <app-full-img-secondary-news title="¡Uruguay campeón del mundo en bochas!" date="27/08" type="bochas"
-        imageUrl="../../../assets/images/news/bochas.jpg" />
-    </div>
-    <div class="d-flex flex-column flex-md-row justify-content-between">
-        <app-main-news
-        title="Volleyball: se juega la 13a fecha del apertura" date="27/08" type="volleyball"
-        description="Se jugara en el polideportivo de las piedras contra el equipo de Enfoque."
-        imageUrl="../../../assets/images/news/partidoVolley.jpg" />
-        <app-full-img-main-news title="¡Campeones del apertura!" date="27/04" type="handball"
-            imageUrl="../../../assets/images/news/mayores.jpg" />
+    <div class="d-flex flex-column flex-md-row justify-content-between mb-4 flex-wrap">
+        <ng-container *ngFor="let news of newsList; let i = index">
+            <ng-container *ngIf="news.verticalImage; else horizontalNews">
+                <app-main-news [newsId]="news.id" [title]="news.title" [description]="news.description"
+                    [imageUrl]="news.imageUrl" [date]="news.date" [topic]="news.topic"
+                    [ngClass]="{'mb-4': i < newsList.length - (newsList.length % 2 === 0 ? 2 : 1)}">
+                </app-main-news>
+            </ng-container>
+            <ng-template #horizontalNews>
+                <app-full-img-main-news [newsId]="news.id" [title]="news.title" [imageUrl]="news.imageUrl"
+                    [date]="news.date" [topic]="news.topic"
+                    [ngClass]="{'mb-4': i < newsList.length - (newsList.length % 2 === 0 ? 2 : 1)}">
+                </app-full-img-main-news>
+            </ng-template>
+        </ng-container>
     </div>
 </div>
 
@@ -56,3 +28,26 @@
         margin-bottom: 5px;
     }
 </style>
+
+    <!--<div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+        <app-main-news
+        title="Volleyball: se juega la 13a fecha del apertura" date="27/08" topic="volleyball"
+        description="Se jugara en el polideportivo de las piedras contra el equipo de Enfoque."
+        imageUrl="../../../assets/images/news/partidoVolley.jpg" />
+        <app-full-img-main-news title="¡Campeones del apertura!" date="27/04" topic="handball"
+            imageUrl="../../../assets/images/news/mayores.jpg" />
+    </div>
+    <div class="w-100 d-flex justify-content-between flex-column flex-sm-row flex-wrap mb-4">
+        <app-secondary-news
+            title="Remodelación del club" date="27/08" topic="general" class="top"
+            description="El club ha renovado su fachada con una nueva capa de pintura vibrante."
+            imageUrl="../../../assets/images/club.jpg" />
+        <app-full-img-secondary-news title="Campeonato de truco" date="27/08" topic="handball"
+        class="top" imageUrl="../../../assets/images/news/truco.jpg" />
+        <app-secondary-news title="Finalizó la 79° vuelta ciclista del Uruguay"
+        date="27/08" topic="ciclismo" class="top2"
+        description="Una gran experiencia para todos los que participaron en cada uno de sus roles."
+        imageUrl="../../../assets/images/news/ciclismo.jpg" />
+        <app-full-img-secondary-news title="¡Uruguay campeón del mundo en bochas!" date="27/08" topic="bochas"
+        imageUrl="../../../assets/images/news/bochas.jpg" />
+    </div>-->

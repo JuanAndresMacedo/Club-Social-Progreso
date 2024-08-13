@@ -1,6 +1,7 @@
 :host {
     width: 23.5%;
     height: 400px;
+    cursor: pointer;
 }
 
 #imgContainer {
@@ -54,10 +55,6 @@ h4 {
     :host {
         width: 100%;
         height: 200px;
-    }
-
-    :host(.top2) {
-        margin-bottom: calc(1rem * 1.5);
     }
 
     #imgContainer {

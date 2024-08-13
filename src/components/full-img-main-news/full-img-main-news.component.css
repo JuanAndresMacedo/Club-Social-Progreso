@@ -1,6 +1,7 @@
 :host {
     width: 49%;
     height: 325px;
+    cursor: pointer;
 }
 
 #imgContainer {

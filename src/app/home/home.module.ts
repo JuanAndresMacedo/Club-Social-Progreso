@@ -68,6 +68,9 @@ import { NewsPageComponent } from './tabs/news-Tab/news-page/news-page.component
     FooterComponent,
     ContentContainerComponent,
     CarouselComponent
+  ],
+  exports: [
+    HomeNavComponent
   ]
 })
 export class HomeModule { }

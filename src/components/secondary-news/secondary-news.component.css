@@ -47,8 +47,4 @@ img {
     :host {
         width: 100%;
     }
-
-    :host(.top2) {
-        margin-bottom: calc(1rem * 1.5);
-    }
 }
